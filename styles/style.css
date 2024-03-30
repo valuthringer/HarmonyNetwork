@@ -1,0 +1,406 @@
+@import url(https://db.onlinewebfonts.com/c/2206d6cc490084998d531e8c1b2cbb4a?family=Druk+Wide+Bold);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono@1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Druk Wide Bold";
+  height: auto;
+}
+html{
+  background: url('../images/bg_sky2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  backdrop-filter: blur(07px);
+}
+
+html, body {
+  color: white;
+}
+
+body {
+  height: auto;
+}
+
+h2{
+  margin-bottom: 20px;
+}
+
+.flex-page{
+  display: flex;
+  justify-content: space-around;
+}
+
+.nom_site {
+  padding-bottom: 30px;
+  font-size: 13px;
+}
+
+.menu_gauche {
+  background: linear-gradient(#010160, black);
+  height: auto;
+  text-align: center;
+  padding: 15px;
+  justify-content: left;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 90px;
+  transition: width 0.5s;
+}
+
+.menu_gauche:hover {
+  width: 150px;
+}
+
+
+.description_actions {
+  display: none;
+}
+
+.menu_gauche .image_menu:hover .description_actions {
+  display: inline; 
+  width: auto;
+  font-size: 14px;
+}
+
+
+.menu_gauche img {
+  width: 30px;
+  height: 30px;
+  margin-left: 5%;
+  margin-top: 10%;
+  cursor: pointer;
+}
+
+.menu_gauche p {
+  margin-left: 5%;
+  margin-top: 5px;
+}
+
+.bloc_principal {
+  background: linear-gradient(rgba(49, 49, 155, 0.6),rgba(255,255,255,0.3));
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 0px 0px 15px 2px black;
+  margin-left: 145px;
+}
+
+
+.bloc_principal img {
+  width: 30px;
+  height: 30px;
+}
+
+.bloc_principal textarea {
+  width: 100%;
+  height: auto;
+  resize: none;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.publier_post{
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px;
+  border: none;
+  margin-left: 20px;
+}
+
+.publier_post:active{
+  transform: scale(0.95);
+}
+
+.emoji:active{
+  transform: scale(0.95);
+}
+
+.harmony_want_post{
+  background: linear-gradient(#3939b1,#17002e);
+  box-shadow: 0px 0px 16px 0.2px white;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+.harmony_want_post img, .harmony_want_post button{
+  cursor: pointer;
+}
+
+
+.config_post_harmo{
+  padding: 10px 10px 0px 10px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.partie_droite_post{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partie_droite_post img{
+  margin-right: 10px;
+}
+
+.partie_gauche_post{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.partie_gauche_post img{
+  margin-right: 10px;
+}
+
+.zone_titre{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.zone_titre span{
+  background: #FFF;
+  padding: 10px;
+  border-radius: 30px;
+  color: black;
+}
+
+h3{
+  font-size: 15px;
+}
+
+.infos_user{
+  display: inline;
+  font-size: 16px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.button_edit{
+  margin-left: 10px;
+  padding: 03px;
+}
+
+.espace{
+  padding-bottom: 10px;
+}
+
+.abos{
+  background-color: black;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+.abos:active{
+  background: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: linear-gradient(#010160, black);
+  color: white;
+  border-radius: 10px;
+  z-index: 1;
+  box-shadow: 0px 0px 15px 2px white;
+}
+
+.popup span.fermer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup p {
+  margin: 5px 0;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.overlay.visible {
+  display: block;
+}
+
+.afficheur_poste_harmony {
+  width: auto;
+  height: auto;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: left;
+  background: white;
+  color: black;
+}
+
+.harmony_post_conf{
+  background: linear-gradient(#3939b1,#52267d);
+  box-shadow: 0px 0px 16px 0.2px white;
+  padding: 20px;
+  border-radius: 40px;
+  text-align: left;
+}
+.espace_droit_post{
+  margin-left: 15px;
+}
+.espace_droit_abo{
+  margin-left: 5px;
+}
+
+.boutons_likes{
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_like_dis{
+  width: 50px;
+  height:auto;
+  padding-left: 3px;
+  cursor: pointer;
+}
+.btn_like_dis:active{
+  transform: scale(0.95);
+}
+
+.delete-post-form button {
+    display: none;
+}
+#poubelle{
+  margin-left: 20px;
+}
+
+
+.res_list{
+  list-style-type: none;
+}
+
+.btn_commenter{
+  text-align:center;
+}
+.btn_commenter button{
+  padding: 5px;
+  border-radius: 20px;
+}
+
+
+.zone_comm{
+  margin-left: 20px;
+  text-align: center;
+}
+
+.zone_comm button{
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.zone_comm textarea{
+  width: 80%;
+  height: auto;
+  resize: none;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 12px;
+  background-color: rgb(255,255,255,0.8);
+}
+
+.txt_com{
+  margin-top: 10px;
+}
+
+.affichage_comm{
+  background: rgb(0,0,0,0.4);
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.commentaire{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.commentaire p{
+  background: rgb(255,255,255,0.8);
+  color: black;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+}
+.flexcomm{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexcomm button{
+  height: 24px;
+  margin-left: 10px;
+}
+
+
+
+.button_base{
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border:none;
+  cursor: pointer;
+}
+
+.button_base:active{
+  background-color: #031959;
+  color: rgb(255,255,255);
+  border:none;
+}
+.button_base:active{
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+.button_base:not(:active){
+  transition: transform 0.1s;
+}
+
+.button_base:hover{
+  transform: scale(1.05);
+  transition: transform 0.1s;
+}
+.button_base:not(:hover){
+  transition: transform 0.1s;
+}

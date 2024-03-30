@@ -1,0 +1,56 @@
+html{
+  text-align:center;
+}
+
+h2{
+  margin-top: 05px;
+  margin-bottom: 40px;
+  font-size: 19px;
+}
+
+label{
+  padding: 10px;
+}
+
+.elements_inscription{
+  padding: 10px;
+}
+
+a{
+  color: #bababa;
+}
+
+#btn_inscription{
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border:none;
+  cursor: pointer;
+}
+
+#btn_inscription:active{
+  background-color: #031959;
+  color: rgb(255,255,255);
+  border:none;
+}
+#btn_inscription:active{
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+#btn_inscription:not(:active){
+  transition: transform 0.1s;
+}
+
+#btn_inscription:hover{
+  transform: scale(1.05);
+  transition: transform 0.1s;
+}
+#btn_inscription:not(:hover){
+  transition: transform 0.1s;
+}
+
+#bloc_principal_inscription{
+  margin-left: 20px;
+}

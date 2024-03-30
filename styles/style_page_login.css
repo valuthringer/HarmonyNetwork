@@ -1,0 +1,104 @@
+.title {
+  text-align: center;
+}
+
+h2{
+  margin-top: 05px;
+  margin-bottom: 40px;
+  font-size: 19px;
+}
+
+h3{
+  margin-bottom: 17px;
+}
+
+label{
+  padding: 10px;
+}
+
+.elements_login{
+  padding: 10px;
+}
+
+a{
+  color: #bababa;
+}
+
+
+
+#error-message {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#error-message p {
+    margin: 0;
+}
+
+#error-message span {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(07px);
+    z-index: 990;
+}
+
+#overlay.visible {
+    display: block;
+}
+
+#bloc_principal_login{
+  margin-left: 20px;
+}
+
+#btn_connexion{
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border:none;
+  cursor: pointer;
+}
+
+#btn_connexion:active{
+  background-color: #031959;
+  color: rgb(255,255,255);
+  border:none;
+}
+#btn_connexion:active{
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+#btn_connexion:not(:active){
+  transition: transform 0.1s;
+}
+
+#btn_connexion:hover{
+  transform: scale(1.05);
+  transition: transform 0.1s;
+}
+#btn_connexion:not(:hover){
+  transition: transform 0.1s;
+}
